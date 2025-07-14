@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- header element -->
+    <header id="head"><h1>Technical Documentation</h1></header>
+
+    <!-- navigation bar -->
+    <nav id="navbar">
+      <header>CDS PSC</header>
+      <a class="nav-link" href="#Probability">Probability</a>
+      <a class="nav-link" href="#Discrete_Mathematical_Structures">Discrete Mathematical Structures</a>
+      <a class="nav-link" href="#Computational_Linear_Algebra">Computational Linear Algebra</a>
+      <a class="nav-link" href="#Image_Processing">Image Processing</a>
+      <a class="nav-link" href="#Computer_Organization_Architecture">Computer Organization Architecture</a>
+      <a class="nav-link" href="#Numerical_Methods">Numerical Methods</a>
+      <a class="nav-link" href="#Human_Resource_Management">Human Resource Management</a>
+    </nav>
+
+    <!-- main element contain all techinal things -->
+    <main id="main-doc">
+
+      <!-- probability -->
+      <section class="main-section" id="Probability">
+        <header>Probability</header>
+        <p>Probability is a branch of mathematics and statistics concerning events and numerical descriptions of how likely they are to occur. The probability of an event is a number between 0 and 1; the larger the probability, the more likely an event is to occur. This number is often expressed as a percentage (%), ranging from 0% to 100%.</p>
+        <p>These concepts have been given an axiomatic mathematical formalization in probability theory, which is used widely in areas of study such as statistics, mathematics, science, finance, gambling, artificial intelligence, machine learning, computer science, game theory, and philosophy to, for example, draw inferences about the expected frequency of events. </p>
+        <h3>Key Concepts in Probability:</h3>
+<ul>
+    <li>Random Variables (Discrete & Continuous)</li>
+    <li>Probability Distributions (Binomial, Poisson, Normal)</li>
+    <li>Bayes' Theorem and Conditional Probability</li>
+    <li>Expected Value and Variance</li>
+    <li>Law of Large Numbers</li>
+    <li>Central Limit Theorem</li>
+    <li>Markov Chains</li>
+    <li>Hypothesis Testing (p-values, Confidence Intervals)</li>
+</ul>
+      </section>
+
+      <!-- DMS -->
+      <section class="main-section" id="Discrete_Mathematical_Structures">
+        <header>Discrete Mathematical Structures</header>
+        <p>Discrete mathematics is the study of mathematical structures that can be considered "discrete" (in a way analogous to discrete variables, having a bijection with the set of natural numbers) rather than "continuous" (analogously to continuous functions). Objects studied in discrete mathematics include integers, graphs, and statements in logic. By contrast, discrete mathematics excludes topics in "continuous mathematics" such as real numbers, calculus or Euclidean geometry. Discrete objects can often be enumerated by integers; more formally, discrete mathematics has been characterized as the branch of mathematics dealing with countable sets (finite sets or sets with the same cardinality as the natural numbers). However, there is no exact definition of the term "discrete mathematics".</p>
+        <p>Some of the topics which come under discrete mathematics are </p>
+        <ul>
+          <li>Combinatorics</li>
+          <li>Set Theory</li>
+          <li>Grpahs</li>
+          <li>Logic</li>
+          <li>Algebric Theory</li>
+        </ul>
+      </section>
+
+      <!-- CLA -->
+      <section class="main-section" id="Computational_Linear_Algebra">
+        <header>Computational Linear Algebra</header>
+        <p>
+        Computational Linear Algebra focuses on developing efficient algorithms for performing 
+        linear algebra operations on computers. It deals with matrix computations, linear systems, 
+        eigenvalue problems, and matrix factorizations that are fundamental to scientific computing, 
+        machine learning, and data analysis. The field emphasizes numerical stability and 
+        computational efficiency when working with large-scale problems.
+    </p>
+      <h3>Key Topics in Computational Linear Algebra:</h3>
+    <ul>
+        <li>Matrix decompositions (LU, QR, SVD, Cholesky)</li>
+        <li>Iterative methods for linear systems</li>
+        <li>Sparse matrix algorithms</li>
+        <li>Numerical stability and conditioning</li>
+        <li>Eigenvalue and singular value computations</li>
+    </ul>
+    <!-- First code block: Matrix-vector multiplication -->
+    <h3>Matrix-Vector Multiplication in Python:</h3>
+    <pre><code class="language-python">
+def matvec(A, x):
+    """Compute matrix-vector product A*x"""
+    m, n = A.shape
+    y = np.zeros(m)
+    for i in range(m):
+        for j in range(n):
+            y[i] += A[i,j] * x[j]
+    return y
+    </code></pre>
+    <!-- Second code block: LU decomposition -->
+    <h3>LU Decomposition Pseudocode:</h3>
+    <pre><code class="language-python">
+function LU_decomposition(A):
+    n = size(A,1)
+    L = eye(n)  // Identity matrix
+    U = zeros(n,n)
+    for k = 1 to n:
+        U[k,k] = A[k,k] - L[k,1:k-1]*U[1:k-1,k]
+        for j = k+1 to n:
+            U[k,j] = A[k,j] - L[k,1:k-1]*U[1:k-1,j]
+        for i = k+1 to n:
+            L[i,k] = (A[i,k] - L[i,1:k-1]*U[1:k-1,k]) / U[k,k]
+    return L, U
+    </code></pre>
+      </section>
+
+      <!-- IP -->
+      <section class="main-section" id="Image_Processing">
+        <header>Image Processing</header>
+        <p>Image Processing involves manipulating digital images to enhance their quality, extract useful information, or transform them for specific applications. Techniques include filtering, edge detection, segmentation, and compression, which are widely used in medical imaging, facial recognition, and autonomous vehicles. The field combines mathematical algorithms with computational methods to process pixel data efficiently.
+</p>
+      <h3>Key Topics in Image Processing:</h3>
+    <ul>
+        <li>Filtering (Gaussian, Median, Sobel)</li>
+        <li>Edge detection (Canny, Prewitt, Laplacian)</li>
+        <li>Image segmentation (Thresholding, Watershed)</li>
+        <li>Morphological operations (Dilation, Erosion)</li>
+        <li>Feature extraction (SIFT, SURF, HOG)</li>
+    </ul>
+    <!-- First code block: Grayscale conversion -->
+    <h3>Grayscale Conversion in Python (OpenCV):</h3>
+    <pre><code class="language-python">
+import cv2
+
+def convert_to_grayscale(image_path):
+    # Read the image
+    img = cv2.imread(image_path)
+    # Convert to grayscale
+    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    return gray_img
+    </code></pre>
+    <!-- Second code block: Gaussian blur -->
+    <h3>Gaussian Blur Implementation:</h3>
+    <pre><code class="language-python">
+import numpy as np
+from scipy.ndimage import convolve
+
+def gaussian_blur(image, kernel_size=5, sigma=1.0):
+    # Create Gaussian kernel
+    ax = np.linspace(-(kernel_size - 1) / 2., (kernel_size - 1) / 2., kernel_size)
+    gauss = np.exp(-0.5 * np.square(ax) / np.square(sigma))
+    kernel = np.outer(gauss, gauss)
+    kernel /= np.sum(kernel)  # Normalize
+    # Apply convolution
+    blurred = convolve(image, kernel)
+    return blurred
+    </code></pre>
+      </section>
+
+      <!-- COA -->
+      <section class="main-section" id="Computer_Organization_Architecture">
+        <header>Computer Organization Architecture</header>
+        <p>
+        Computer Organization and Architecture refers to the study of the internal workings, structure, and design of computer systems. It encompasses the design of processors (CPU), memory hierarchies, input/output systems, and how instructions are executed at the hardware level. Key concepts include instruction set architecture (ISA), pipelining, caching, and parallel processing. Understanding these principles is crucial for optimizing performance, improving energy efficiency, and developing new computing technologies, from embedded systems to supercomputers.
+    </p>
+    <p>
+        Modern advancements in computer architecture focus on overcoming challenges like Moore’s Law limitations, power consumption, and the need for specialized hardware (e.g., GPUs for AI and TPUs for machine learning). Emerging trends include quantum computing, neuromorphic architectures, and heterogeneous computing systems that combine CPUs, GPUs, and FPGAs. Knowledge of computer organization is essential for software developers, hardware engineers, and system designers to create efficient and scalable solutions in fields like cybersecurity, cloud computing, and real-time systems.
+    </p>
+      </section>
+
+      <!-- NM -->
+      <section class="main-section" id="Numerical_Methods">
+        <header>Numerical Methods</header>
+        <p>Numerical methods are algorithms used to solve mathematical problems that are difficult or impossible to solve analytically. These techniques are essential in scientific computing, engineering, and data analysis, where exact solutions are often unavailable. Common applications include solving differential equations, optimization problems, and linear systems. Numerical methods provide approximate solutions while carefully considering errors, stability, and computational efficiency to ensure reliable results.</p>
+        <h3>Key Numerical Methods:</h3>
+    <ul>
+        <li>Root-finding methods (Bisection, Newton-Raphson)</li>
+        <li>Numerical integration (Trapezoidal rule, Simpson's rule)</li>
+        <li>Linear algebra techniques (LU decomposition, QR factorization)</li>
+        <li>Ordinary Differential Equation (ODE) solvers (Euler, Runge-Kutta)</li>
+        <li>Interpolation and approximation (Spline, Least Squares)</li>
+        <li>Monte Carlo methods for stochastic problems</li>
+    </ul>
+    <!-- First code block: Newton-Raphson method -->
+    <h3>Newton-Raphson Method in Python:</h3>
+    <pre><code class="language-python">
+def newton_raphson(f, df, x0, tol=1e-6, max_iter=100):
+    """Find root of f(x) using Newton-Raphson method"""
+    x = x0
+    for i in range(max_iter):
+        fx = f(x)
+        if abs(fx) < tol:
+            return x
+        dfx = df(x)
+        if dfx == 0:
+            raise ValueError("Zero derivative. No solution found.")
+        x = x - fx/dfx
+    raise ValueError("Exceeded maximum iterations. No solution found.")
+    </code></pre>
+    
+    <!-- Second code block: Trapezoidal integration -->
+    <h3>Numerical Integration (Trapezoidal Rule):</h3>
+    <pre><code class="language-python">
+def trapezoidal_rule(f, a, b, n=1000):
+    """Approximate integral of f from a to b using trapezoidal rule"""
+    h = (b - a) / n
+    integral = 0.5 * (f(a) + f(b))
+    for i in range(1, n):
+        integral += f(a + i * h)
+    return integral * h
+    </code></pre>
+
+      </section>
+
+      <!-- HRM -->
+      <section class="main-section" id="Human_Resource_Management">
+        <header>Human Resource Management</header>
+        <p>
+        Human Resource Management is the strategic approach to managing an organization's most valuable assets - its people. It encompasses all aspects of employee administration, from recruitment and onboarding to training, performance evaluation, and retention. Modern HRM focuses on aligning human capital with organizational goals while fostering a positive work environment. In today's dynamic business landscape, HR professionals play a crucial role in talent management, organizational development, and creating competitive advantages through effective workforce strategies.
+    </p>
+    <p>
+        The digital transformation has significantly impacted HRM practices, introducing technologies like HR analytics, AI-powered recruitment tools, and employee engagement platforms. Contemporary challenges include managing remote workforces, promoting diversity and inclusion, and adapting to changing labor laws. Strategic HRM now emphasizes data-driven decision making, employee experience, and developing agile organizational cultures that can thrive in rapidly changing business environments.
+    </p>
+    <h3>Core Functions of HRM:</h3>
+    <ul>
+        <li>Talent Acquisition and Recruitment</li>
+        <li>Training and Development</li>
+        <li>Performance Management</li>
+        <li>Compensation and Benefits Administration</li>
+        <li>Employee Relations and Engagement</li>
+        <li>Workforce Planning and Strategy</li>
+        <li>Compliance with Labor Laws and Regulations</li>
+        <li>Organizational Culture Development</li>
+    </ul>
+      </section>
+    </main>
+  </body>
+</html>
