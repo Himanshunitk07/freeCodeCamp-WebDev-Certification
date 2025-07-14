@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: poppins,sans-serif;
+}
+
+h2,h3,h4,h5,h6 {
+  font-family: Playfair Display;
+  background-color: rgb(248, 216, 33);
+  padding-left: 0.8rem;
+}
+
+.magazine-cover {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+  "title title title"
+  "feature-article feature-article cover-image"
+  "small-article1 small-article2 cover-image";
+  width: 100vw;
+  gap: 10px;
+}
+
+.title {
+  grid-area: title;
+  font-family: Playfair Display;
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(248, 216, 33);
+  text-align: center;
+}
+
+.feature-article {
+  grid-area: feature-article;
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+
+.goldy::first-letter {
+  color: gold;
+  font-size: 2.5rem;
+  
+}
+
+.small-article1 {
+  grid-area: small-article1;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.cover-image {
+  grid-area: cover-image;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  margin-top: 1rem;
+  list-style-type: none;
+}
+
+li::before {
+  content: "* ";
+  color: gold;
+  font-size: 1.5rem;
+}
+
+table {
+  margin-top: 1rem;
+  width: 80%;
+}
+
+
+@media (max-width: 768px) {
+  .magazine-cover {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "cover-image"
+      "feature-article"
+      "small-article1"
+      "small-article2";
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  table {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .feature-article,
+  .small-article1,
+  .small-article2 {
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li::before {
+    font-size: 1.2rem;
+  }
+}
+
+
+
