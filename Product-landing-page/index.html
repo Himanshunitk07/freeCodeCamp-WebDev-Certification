@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+<body>
+  <main>
+    <!-- header -->
+    <header id="header">
+        <div><img src="https://media.istockphoto.com/id/1249218247/vector/golden-dollar-symbol-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=qRHeQZPPk4kFunmi8wR-6ChJMHuKTukTFHUwWbOsoa8=" alt="a golden dollar sign" id="header-img"></div>
+        <div class="h1"><h1>Statistical Guruji</h1></div>
+      <nav id="nav-bar">
+        <div class="links"><a class="nav-link" href="#sign-up">Sign-up</a></div>
+        <div class="links"><a class="nav-link" href="#section-video">Video</a></div>
+        <div class="links"><a class="nav-link" href="#products">Products</a></div>
+        <div class="links"><a class="nav-link" href="#footer">More</a></div>
+      </nav>
+    </header>
+
+    <!-- video -->
+    <section id="section-video">
+      <iframe 
+      id="video"
+      width="760" 
+      height="515" 
+      src="https://www.youtube.com/embed/88ramcN9qTo?si=k7xP0k7r07bQqGZ1" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- sign-up using email -->
+    <section id="sign-up">
+      <h2>Sign-Up</h2>
+      <form action="https://www.freecodecamp.org/email-submit" id="form">
+        <label for="email">Enter your email</label>
+        <input id="email" type="email" placeholder="abc@gmail.com" name="email" required>
+
+        <label for="submit">Press 'Submit' to get signed-in</label>
+        <input type="submit" id="submit">
+      </form>
+    </section>
+
+    <!-- 4 products -->
+    <section id="products">
+      <div id="p1">
+        <img src="https://m.media-amazon.com/images/I/31vJEJyX7oL._SR480,440_.jpg" alt="front-back image of oneplus phone">
+        <div>
+          <p class="price">₹ 26998.00</p>
+          <p class="p-name">OnePlus Nord CE5</p>
+        </div>
+      </div>
+      <div id="p2">
+        <img src="https://m.media-amazon.com/images/I/41UC0ARSbRL._SR480,440_.jpg" alt="front-back image of Neo phone">
+        <div>
+          <p class="price">₹ 27998.00</p>
+          <p class="p-name">iQOO Neo 10R 5G</p>
+        </div>
+      </div>
+      <div id="p3">
+        <img src="https://m.media-amazon.com/images/I/41FkP4tEU-L._SR480,440_.jpg" alt="front-back image of Samsung phone">
+        <div>
+          <p class="price">₹ 9799.00</p>
+          <p class="p-name">Samsung Galaxy M06 5G</p>
+        </div>
+      </div>
+      <div id="p4">
+        <img src="https://m.media-amazon.com/images/I/41wRkWtnc5L._SR480,440_.jpg" alt="front-back image of Redmi phone">
+        <div>
+          <p class="price">₹ 11498</p>
+          <p class="p-name">Redmi 14C 5G </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="more"><p>To explore more products, please visit <a href="https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=763039729888&hvpos=&hvnetw=g&hvrand=13326440454410881482&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9298250&hvtargid=kwd-64107830&hydadcr=14452_2423443&gad_source=1">Amazon</a></p></div>
+      <div class="self"><p>Made by <span>Himanshu Dadhich</span></p></div>
+    </footer>
+  </main>
+</body>
+
+</html>
